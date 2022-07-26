@@ -5,5 +5,5 @@ status_code=$(curl --write-out %{http_code} --silent --output /dev/null http://l
 if [[ "$status_code" -ne 200 ]] ; then
   echo "Site status changed to $status_code. Please check the deployment" 
 else
-  "echo Deployment success"
+  echo "Deployment success"
 fi
