@@ -9,7 +9,8 @@ pipeline {
             }
             stage('Build') {
                   steps {
-				        sh 'pm2 stop all'
+				        sh 'pm2 restart index.js'
+						sh 'pm2 stop all'
 						sh 'pm2 delete all'
 						sh 'npm install'						
 						sh 'pm2 start index.js'
@@ -17,4 +18,9 @@ pipeline {
             }
             
       }
+	  post { 
+          always { 
+              cleanWs()
+        }
+    }
 }
