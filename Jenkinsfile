@@ -9,10 +9,10 @@ pipeline {
             }
             stage('Build') {
                   steps {
-				        sh 'pm2 stop all'
-						sh 'pm2 delete all'
-						sh 'npm install'						
-						sh 'pm2 start index.js'
+				        bat 'pm2 stop all'
+						bat 'pm2 delete all'
+						bat 'npm install'						
+						bat 'pm2 start index.js'
                   }
             }
             
