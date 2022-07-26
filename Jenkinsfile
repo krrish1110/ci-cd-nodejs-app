@@ -24,8 +24,7 @@ pipeline {
 			stage('Test') {
                   steps {
 						sh "sleep 20"
-						sh "curl -I --connect-timeout 5 --max-time 10 --retry 5 --retry-delay 0 http://localhost:$SERVICE_PORT 2>&1 | grep -w 200"
-						sh "echo Deployment success"
+						sh "./script.sh"
                   }
             }
             
