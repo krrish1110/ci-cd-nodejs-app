@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cd /usr/share/nginx/html
+cd /home/ubuntu/nodejs
 npm install
 pm2 start index.js
