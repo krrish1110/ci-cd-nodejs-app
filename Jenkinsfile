@@ -9,7 +9,7 @@ pipeline {
         }
 		stage('Git Clone / Checkout') {
             steps {
-                sh 'cat testyoyo-dummy.txt'
+                powershell 'Get-Content -Path .\\testyoyo-dummy.txt'
             }
         }
     }
