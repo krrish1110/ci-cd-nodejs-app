@@ -9,7 +9,7 @@ pipeline {
         }
 		stage('Git Clone / Checkout') {
             steps {
-                sh 'cat testyoyo-dummy.txt'
+                git 'https://github.com/krrish1110/ci-cd-nodejs-app.git'
             }
         }
     }
